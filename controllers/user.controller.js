@@ -90,7 +90,7 @@ const profile = async(req, res) => {
     try {
 
         const user = await UserModel.findOneByEmail(req.email)
-        return res.json({ ok: true, msg: user})
+        return res.json({ ok: true, msg: user}) //devuelve todos los datos del usuario
 
     } catch (error) {
         console.log(error)
